@@ -1,0 +1,232 @@
+/* RESETE CSS */
+
+* {padding: 0;margin: 0;box-sizing: border-box;text-decoration: none;font-family: sans-serif;font-size: 14px;}
+body {width: 100%;min-height: 100vh;background-color: rgb(243,243,243);margin: 0;padding: 0;display: flex;justify-content: center;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.instragram-wraper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 100vh;
+  margin-left: -34px;
+}
+
+
+.instagram-phone{
+    justify-content: center;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    background-image: url(img/instagram-celular.png);
+    background-position: 0 0;
+    background-size: 454px 618px;
+    -webkit-flex-basis: 454px;
+    -ms-flex-preferred-size: 454px;
+    flex-basis: 454px;
+    height: 618px;
+    background-repeat: no-repeat; 
+/*     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%; */
+}
+
+/* .instagram-phone img {
+    height: 50rem;
+} */
+
+.instagram-slider{
+    margin: 99px 30px 0 151px;
+    position: relative;
+}
+
+
+.instagram-continue {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 50%;
+  min-height: 34rem;
+  max-width: 350px;
+
+}
+
+.group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 1.3rem 0;
+  border: 1px solid lightgray;
+}
+
+.group:nth-child(1) {
+  min-height: 19rem;
+}
+
+.instagram-logo{
+  height: 3rem;
+}
+
+.profile-photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  border: solid 1px #efefef;
+}
+
+.profile-photo img {
+  height: 100px;
+  
+}
+
+.instagram-login {
+  background-color: #0095f6;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.instagram-logout {
+  color: #0095f6;
+  margin-top: 1rem;
+}
+
+.not-account {
+  color: rgb(160,160,160);
+}
+
+.link-blue {
+  color: #0095f6;
+}
+
+.get-the-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1.3rem 0;
+}
+
+.download {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+}
+
+.app-download {
+  height: 3rem;
+  width: 10rem;
+  background-size: cover;
+}
+
+.app-download:nth-child(1) {
+  background-image: url(img/app-store-badge.svg);
+}
+
+.app-download:nth-child(2) {
+  background-image: url(img/google-play-badge.svg);
+}
+
+
+
+
+  /* MEDIA QUERIES */
+  @media (height: 1366px) {
+    .instragram-wraper{
+      margin-top: -20%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .instragram-wraper{
+      width: 90%;
+      margin-top: -76px;
+    }
+  }
+
+  @media (max-width: 650px) {
+
+    body {
+      background-color: #ffffff;
+    }
+
+    .instragram-wraper {
+      width: 90%;
+    }
+    .instagram-phone {
+      display: none;
+    }
+    .instagram-continue {
+      width: 100%;
+      margin-right: -10%;
+    }
+
+    .group {
+      border: 1px solid transparent;
+    }
+  }
+
+  @media (max-height: 640px) {
+  .instagram-continue {
+    margin-top: 50%;
+    }
+  }
+
+  @media (max-width: 280px) {
+    .app-download {
+      height: 33px;
+      width: 110px;
+    }
+  }
+
+  @media (min-width: 320px) {
+    .app-download {
+      height: 37px;
+      width: 125px;
+    }
+  }
+
+
+
+  /* ANIMAÇÃO SLIDES */
+        
+
+        
+        .active {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 2s;
+          animation-name: fade;
+          animation-duration: 2s;
+        }
+        
+        @-webkit-keyframes fade {
+          from {opacity: .2} 
+          to {opacity: 1}
+        }
+        
+        @keyframes fade {
+          from {opacity: .2} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+        }
